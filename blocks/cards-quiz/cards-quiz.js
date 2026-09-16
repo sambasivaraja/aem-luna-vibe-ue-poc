@@ -24,6 +24,21 @@ export default function decorate(block) {
         div.className = 'cards-quiz-card-body';
       }
     });
+    // Match the source layout: the eyebrow label sits above the illustration,
+    // and the trailing paragraph is the call-to-action.
+    const body = li.querySelector('.cards-quiz-card-body');
+    if (body) {
+      const paras = [...body.querySelectorAll(':scope > p')];
+      if (paras.length) {
+        const eyebrow = paras[0];
+        eyebrow.className = 'cards-quiz-card-eyebrow';
+        li.prepend(eyebrow);
+      }
+      const rest = [...body.querySelectorAll(':scope > p')];
+      if (rest.length) {
+        rest[rest.length - 1].className = 'cards-quiz-card-cta';
+      }
+    }
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
