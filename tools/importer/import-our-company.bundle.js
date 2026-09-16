@@ -54,6 +54,8 @@ var CustomImportScript = (() => {
       imgFrag.appendChild(document2.createComment(" field:image "));
       imgFrag.appendChild(image);
       cells.push([imgFrag]);
+    } else {
+      cells.push([""]);
     }
     const textContent = [];
     if (eyebrow) {

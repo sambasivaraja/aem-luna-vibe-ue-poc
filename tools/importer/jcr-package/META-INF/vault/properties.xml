@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>FileVault Package Definition</comment>
+    <entry key="name">aem-luna-vibe-ue-poc-stories</entry>
+    <entry key="group">medtronic-migration</entry>
+    <entry key="version">1.0</entry>
+    <entry key="description">Migrated Universal Editor page: /en-us/our-company/stories (Medtronic Stories)</entry>
+    <entry key="createdBy">excat-migration</entry>
+    <entry key="packageType">content</entry>
+    <entry key="requiresRoot">false</entry>
+    <entry key="allowIndexDefinitions">false</entry>
+</properties>
