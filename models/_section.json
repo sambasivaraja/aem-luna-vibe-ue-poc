@@ -50,7 +50,11 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "hero-feature",
+        "carousel-stories",
+        "cards-quiz",
+        "cards-article"
       ]
     }
   ]

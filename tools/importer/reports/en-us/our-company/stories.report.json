@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.medtronic.com/en-us/our-company/stories.html",
+  "path": "en-us/our-company/stories",
+  "timestamp": "2026-09-16T08:55:33.826Z",
+  "title": "Medtronic Stories: Where health tech comes to life | Medtronic",
+  "template": "our-company",
+  "blocks": [
+    "hero-feature",
+    "carousel-stories",
+    "cards-quiz",
+    "cards-article"
+  ]
+}

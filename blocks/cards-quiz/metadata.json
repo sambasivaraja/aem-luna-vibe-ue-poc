@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-quiz",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Grey-section, 3-up grid of tall blue interactive quiz cards. Each card has an eyebrow label (e.g. 'Myth or reality?'), an illustration, a large question, a set of answer-option pill buttons, and a 'Get the facts' CTA.",
+  "contentPattern": "Container block, one row per card: image cell + text cell (eyebrow + question + options list + CTA).",
+  "usage": "Use for a row of interactive knowledge-check quiz cards.",
+  "options": [],
+  "memberVariantIds": ["cards-quiz"]
+}

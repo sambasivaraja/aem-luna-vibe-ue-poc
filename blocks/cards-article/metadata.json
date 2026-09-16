@@ -1,0 +1,10 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Light 2-column grid of article cards. Each card has an eyebrow/category label, a thumbnail image, a title, a short description, and a 'Find out'/'Learn more' CTA link. Some cards are text-only (no image).",
+  "contentPattern": "Container block, one row per card: optional image cell + text cell (eyebrow + title + description + CTA).",
+  "usage": "Use for an 'editor's picks' style grid of article teasers.",
+  "options": [],
+  "memberVariantIds": ["cards-article"]
+}
