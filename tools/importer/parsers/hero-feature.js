@@ -23,12 +23,16 @@ export default function parse(element, { document }) {
 
   const cells = [];
 
-  // Row 2 (optional): background image
+  // Row 2: background image. Always emit this row so every model field aligns
+  // to a column (md2jcr/JCR requires it). Empty cell (no hint) when the source
+  // hero uses a CSS/section background with no foreground <img>.
   if (image) {
     const imgFrag = document.createDocumentFragment();
     imgFrag.appendChild(document.createComment(' field:image '));
     imgFrag.appendChild(image);
     cells.push([imgFrag]);
+  } else {
+    cells.push(['']);
   }
 
   // Row 3: richtext content (title, subheading, CTA link)
