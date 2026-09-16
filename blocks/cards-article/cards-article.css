@@ -1,40 +1,123 @@
+/* cards-article -- "Editor's picks" article card grid
+   Values extracted from https://www.medtronic.com/en-us/our-company/stories.html
+   (.marc-v2-cards-container .card-container). */
+
 .cards-article > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 30px;
 }
 
+/* card panel: white, rounded, soft shadow (source .marc-card-container) */
 .cards-article .cards-article-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #dadada;
   background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0 4px 8px 0;
   overflow: hidden;
 }
 
+/* eyebrow / category label -- uppercase brand indigo, above the image */
+.cards-article .cards-article-card-eyebrow {
+  margin: 26px 24px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--brand-indigo);
+}
+
+/* image -- inset with rounded corners, 16:9 cover */
 .cards-article .cards-article-card-image {
+  margin: 0;
+  padding: 0 24px;
   line-height: 0;
 }
 
 .cards-article .cards-article-card-image img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1200 / 675;
   object-fit: cover;
+  border-radius: 4px;
 }
 
-.cards-article .cards-article-card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 24px;
-  flex: 1;
+/* headline */
+.cards-article .cards-article-card-title {
+  margin: 20px 0 12px;
+  padding: 0 24px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: rgb(30 30 30);
+}
+
+.cards-article .cards-article-card-title a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* description */
+.cards-article .cards-article-card-desc {
+  margin: 0 0 20px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgb(100 100 100);
+}
+
+/* CTA link -- bold bright blue, no underline; pinned to card bottom */
+.cards-article .cards-article-card-cta {
+  margin: auto 0 0;
+  padding: 0 24px 32px;
+}
+
+.cards-article .cards-article-card-cta a:any-link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(16 16 235);
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-cta a:hover {
+  text-decoration: underline;
 }
 
 @media (width >= 600px) {
   .cards-article > ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-article .cards-article-card-eyebrow {
+    margin: 26px 24px 24px;
+  }
+
+  .cards-article .cards-article-card-title {
+    margin: 2px 0 15px;
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  .cards-article .cards-article-card-desc {
+    margin: 0 0 24px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .cards-article .cards-article-card-cta {
+    padding: 0 24px 46px;
+  }
+
+  .cards-article .cards-article-card-cta a:any-link {
+    font-size: 24px;
   }
 }

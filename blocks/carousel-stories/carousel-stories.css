@@ -1,3 +1,10 @@
+/* Block: carousel-stories
+ * Design migrated from https://www.medtronic.com/en-us/our-company/stories.html
+ * (the "Medtronic Stories" swipable story-tile row).
+ * Values from source computed styles: portrait 3/4 image tiles, ~3 visible on
+ * desktop with an ~18px gutter, near-black medium-weight headlines beneath.
+ */
+
 .carousel-stories .carousel-stories-slides-container {
   position: relative;
 }
@@ -11,7 +18,7 @@
 
 .carousel-stories .carousel-stories-slides {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow: scroll clip;
@@ -21,7 +28,7 @@
   display: none;
 }
 
-/* Each story is an image-forward tile, not a full-bleed slide */
+/* Each story is an image-forward tile: portrait image + linked headline below */
 .carousel-stories .carousel-stories-slide {
   flex: 0 0 80%;
   scroll-snap-align: start;
@@ -31,49 +38,85 @@
   position: relative;
 }
 
+.carousel-stories .carousel-stories-slide .carousel-stories-slide-image {
+  margin: 0;
+}
+
+.carousel-stories .carousel-stories-slide .carousel-stories-slide-image p {
+  margin: 0;
+}
+
 .carousel-stories .carousel-stories-slide .carousel-stories-slide-image picture {
   display: block;
 }
 
 .carousel-stories .carousel-stories-slide .carousel-stories-slide-image img {
+  display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
 .carousel-stories .carousel-stories-slide .carousel-stories-slide-content {
-  padding: 12px 0;
+  padding: 24px 0 0;
 }
 
+/* Linked headline beneath each tile: near-black, medium weight, tight tracking */
+.carousel-stories .carousel-stories-slide-content h2 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.0375em;
+  color: rgb(30 30 30);
+}
+
+.carousel-stories .carousel-stories-slide-content h2 a:any-link {
+  color: rgb(30 30 30);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.carousel-stories .carousel-stories-slide-content h2 a:hover,
+.carousel-stories .carousel-stories-slide-content h2 a:focus-visible {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* Dot indicators */
 .carousel-stories .carousel-stories-slide-indicators {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px 12px;
-  padding: 12px;
+  padding: 20px 12px 0;
   line-height: 0;
 }
 
 .carousel-stories .carousel-stories-slide-indicator button {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   margin: 0;
   padding: 0;
+  border: 0;
   border-radius: 50%;
   background-color: #dadada;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .carousel-stories .carousel-stories-slide-indicator button:disabled,
 .carousel-stories .carousel-stories-slide-indicator button:hover,
 .carousel-stories .carousel-stories-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
+  background-color: var(--brand-indigo);
 }
 
+/* Prev/next round nav buttons, vertically centered on the image band */
 .carousel-stories .carousel-stories-navigation-buttons {
   position: absolute;
-  top: 40%;
+  top: 38%;
   transform: translateY(-50%);
   left: 12px;
   right: 12px;
@@ -89,25 +132,27 @@
   width: 44px;
   height: 44px;
   margin: 0;
+  border: 0;
   border-radius: 50%;
   padding: 0;
-  background-color: rgb(19 19 19 / 25%);
+  background-color: rgb(20 15 75 / 55%);
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .carousel-stories .carousel-stories-navigation-buttons button:hover,
 .carousel-stories .carousel-stories-navigation-buttons button:focus-visible {
-  background-color: rgb(19 19 19 / 75%);
+  background-color: var(--brand-indigo);
 }
 
 .carousel-stories .carousel-stories-navigation-buttons button::after {
   display: block;
   content: '';
-  border: 2px solid;
+  border: 2px solid #fff;
   border-bottom: 0;
   border-left: 0;
-  height: 12px;
-  width: 12px;
+  height: 11px;
+  width: 11px;
   position: absolute;
   top: 50%;
   left: calc(50% + 2px);
@@ -121,12 +166,16 @@
 
 @media (width >= 600px) {
   .carousel-stories .carousel-stories-slide {
-    flex: 0 0 40%;
+    flex: 0 0 46%;
   }
 }
 
 @media (width >= 900px) {
   .carousel-stories .carousel-stories-slide {
-    flex: 0 0 25%;
+    flex: 0 0 32%;
+  }
+
+  .carousel-stories .carousel-stories-slide-content h2 {
+    font-size: 32px;
   }
 }
