@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "our-company",
+      "urls": [
+        "https://www.medtronic.com/en-us/our-company/stories.html"
+      ],
+      "representativeUrl": "https://www.medtronic.com/en-us/our-company/stories.html",
+      "description": "Our Company story-hub landing page: dark hero, stories carousel, interactive quiz cards, editor's picks article grid, and an about text section.",
+      "urlPattern": "/en-us/our-company/*",
+      "blocks": [
+        {
+          "name": "hero-feature",
+          "instances": ["#featured-article"]
+        },
+        {
+          "name": "carousel-stories",
+          "instances": [".carousel.marc-carousel", ".marc-carousel .cmp-carousel__content"]
+        },
+        {
+          "name": "cards-quiz",
+          "instances": [".column-Container.grid-4-4-4.marc2-combined-column"]
+        },
+        {
+          "name": "cards-article",
+          "instances": [".marc-v2-cards-container .column-Container.grid-6-6.marc2-combined-column", ".marc-v2-cards-container"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "name": "Hero",
+          "selector": ["#featured-article"],
+          "style": null,
+          "blocks": ["hero-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "stories-carousel",
+          "name": "Stories Carousel",
+          "selector": [".marc-carousel", ".carousel.marc-carousel"],
+          "style": null,
+          "blocks": ["carousel-stories"],
+          "defaultContent": ["#stories"]
+        },
+        {
+          "id": "quiz",
+          "name": "Quiz",
+          "selector": [".cmp-container.bg-atmospheric-white", ".column-Container.grid-4-4-4.marc2-combined-column"],
+          "style": "grey",
+          "blocks": ["cards-quiz"],
+          "defaultContent": ["#quiz"]
+        },
+        {
+          "id": "editors-picks",
+          "name": "Editor's Picks",
+          "selector": [".marc-v2-cards-container"],
+          "style": null,
+          "blocks": ["cards-article"],
+          "defaultContent": ["#icymi"]
+        },
+        {
+          "id": "about",
+          "name": "About",
+          "selector": [".mdt-marc-container"],
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [".mdt-marc-container .cmp-text"]
+        }
+      ]
+    }
+  ]
+}

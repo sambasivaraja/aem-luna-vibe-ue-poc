@@ -1,0 +1,61 @@
+.cards-quiz > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.cards-quiz .cards-quiz-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cards-quiz .cards-quiz-card-image {
+  line-height: 0;
+}
+
+.cards-quiz .cards-quiz-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-quiz .cards-quiz-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  flex: 1;
+}
+
+/* answer options stack as full-width pill buttons */
+.cards-quiz .cards-quiz-card-body ul,
+.cards-quiz .cards-quiz-card-body ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cards-quiz .cards-quiz-card-body ul li {
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-align: center;
+}
+
+@media (width >= 600px) {
+  .cards-quiz > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-quiz > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

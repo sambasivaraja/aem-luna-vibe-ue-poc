@@ -1,0 +1,10 @@
+{
+  "variantName": "hero-feature",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Dark, full-bleed hero banner with a background image. Text overlay contains an eyebrow/kicker, a large headline, a short supporting paragraph, and a single CTA button. Minimal content density; text left-aligned over the imagery.",
+  "contentPattern": "Row 1 = background image; row 2 = rich text (eyebrow + headline + paragraph + CTA link).",
+  "usage": "Use as the top-of-page feature banner introducing a themed content hub.",
+  "options": [],
+  "memberVariantIds": ["hero-feature"]
+}

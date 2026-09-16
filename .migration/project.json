@@ -1,0 +1,15 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "aem-luna-vibe-ue-poc": {
+      "previewOrg": "sambasivaraja",
+      "previewSite": "aem-luna-vibe-ue-poc",
+      "contentHostUrl": "author-p100070-e1109583.adobeaemcloud.com",
+      "aemSitePath": "/content/aem-luna-vibe-ue-poc",
+      "aemAssetsFolderPath": "/content/dam/aem-luna-vibe-ue-poc",
+      "aemSiteName": "aem-luna-vibe-ue-poc",
+      "aemSiteTitle": "medtronic-luna-vibe-ue-poc",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

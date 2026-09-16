@@ -1,0 +1,10 @@
+{
+  "variantName": "carousel-stories",
+  "baseBlock": "carousel",
+  "canonicalModel": "collection",
+  "visualCharacteristics": "Light-section, image-forward story carousel. Each slide is a tile showing a story image with a category label overlaid and a linked headline beneath. Multiple tiles are visible at once in a horizontally scrollable/swipable row with prev/next controls.",
+  "contentPattern": "Container block with one row per slide: image cell + text cell (title/headline link).",
+  "usage": "Use to present a swipable row of story teaser tiles below a section heading.",
+  "options": [],
+  "memberVariantIds": ["carousel-stories"]
+}
